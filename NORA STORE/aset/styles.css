@@ -1,0 +1,315 @@
+body, h1, h2, p, ul, li, a, img, input, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b6e5fc;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-color: #08208e;
+    padding: 10px;
+    color: #fff;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0; /* Setel lebar awal sidebar menjadi 0 */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.open-sidebar-button {
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    z-index: 2;
+    max-width: 250px;
+    height: auto;
+    padding: auto;
+    margin: auto;
+}
+
+.close-sidebar-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    display: none; /* Awalnya disembunyikan */
+    max-width: 150px;
+    height: auto;
+    padding: auto;
+    margin: auto;
+}
+
+.content {
+    margin-left: 0;
+    padding: 15px;
+    text-align: center;
+    background-color: #2b42a6;
+}
+
+.content h1 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.content h2 {
+    color: white;
+    font-size: 34px;
+    flex: 1;
+    margin-left: 85px;
+    margin-right: 85px;
+}
+
+.content p {
+    color: white;
+    font-size: 34px;
+    flex: 1;
+    margin-left: 85px;
+    margin-right: 85px;
+    margin-bottom: 20%;
+}
+
+h1 {
+    font-size: 34px;
+    color: white;
+    outline-color: black;
+}
+
+.logo img {
+    max-width: 250px;
+    height: auto;
+    padding: auto;
+    margin: auto;
+}
+
+.nama img {
+    max-width: 400px;
+    height: auto;
+    padding: auto;
+    margin: auto;
+}
+
+.search {
+    display: flex;
+}
+
+.search input {
+    padding: 5px;
+    border: 5px solid #fff;
+}
+
+.search button {
+    background-color: #097cff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #6da5e4;
+}
+
+nav {
+    background-color: #04378f;
+    box-shadow: #04063c 7px 7px 7px 7px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:hover {
+    color: #bf00ff;
+    transition: all .3s ease-in-out;
+}
+
+.home {
+    background-color: #2b42a6;
+    text-align: center ;
+    padding: 20px 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.image-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.image-wrapper img {
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.controls {
+    display: flex;
+    margin-top: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #b6e5fc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #adadad;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.pagination span.active {
+    background-color: #fff; /* Warna putih saat aktif */
+}
+
+.home-content h1 {
+    font-size: 36px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #191919;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.products {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #b6e5fc;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 50%;
+    border-radius: 100%;
+    max-width: 50%;
+    height: auto;
+}
+
+.product-card h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.discounted-price {
+    color: #e74c3c;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #08208e;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 0;
+}
+
+.footer-content p {
+    margin: 0;
+}
